@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-2.20.0.min.js" charset="utf-8"></script>
+    <title>počasí</title>
+</head>
+
+<body>
+    
+    <main>
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-map-marker-alt"></i>
+                <input type="text" id="location-search" required="required" placeholder="zadejte lokaci" />
+                <button class="search" id="search" onclick="showDiv()"><i
+                        class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="error"><span>neplatná lokace!</span></div>
+            <div class="weather" id="weather">
+                <div class="temp-info-wrapper">
+
+                
+                <div class="weather-temp">
+                    <img class="weather-condition" src="" alt="">
+                    <div class="mainTempInfo">
+                        <p class="temp" style="font-size: 70px;">NaN</p>
+                        <p class="city" style="font-size: 30px;">NaN</p>
+                        <br>
+                        <div class="coords">
+                            <div class="coords2">
+                                <span>z. šířka</span>
+                                <span class="lat" style="font-size: 17px;">NaN</span>
+                            </div>
+                            <div class="coords2">
+                                <span>z. délka</span>
+                                <span class="lon" style="font-size: 17px;">NaN</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="weather-info">
+                    <div class="card-2x2">
+                        <div class="card" id="card1">
+                            <span style="font-size: 25px; position: relative; bottom: 30px;">tlak</span>
+                            <span class="pressure">NaN</span>
+                        </div>
+                        <div class="card" id="card2">
+                            <span style="font-size:25px; position: relative; bottom: 30px;">vlhkost</span>
+                            <span class="humidity">NaN</span>
+                        </div>
+                    </div>
+                    <div class="card-2x2">
+                        <div class="card" id="card3">
+                            <span style="font-size: 25px; position: relative; bottom: 30px;">rychlost větru</span>
+                            <span class="wind-speed">NaN</span>
+                        </div>
+                        <div class="card" id="card4">
+                            <span style="font-size: 25px; position: relative; bottom: 30px;">UV Index</span>
+                            <span class="uvindex">NaN</span>
+
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="forecast-chart-wrapper">
+                    <div class="weather-forecast">
+                        <div class="forecastCard1 forecastCard">
+                            <span class="forecastCard1Temp" style="font-size: 35px;"></span>
+                            <span class="forecast1Time" style="font-size: 13px;"></span>
+                        </div>
+                        <div class="forecastCard2 forecastCard">
+                            <span class="forecastCard2Temp " style="font-size: 35px;"></span>
+                            <span class="forecast2Time" style="font-size: 13px;"></span>
+                        </div>
+                        <div class="forecastCard3 forecastCard">
+                            <span class="forecastCard3Temp" style="font-size: 35px;"></span>
+                            <span class="forecast3Time" style="font-size: 13px;"></span>
+                        </div>
+                        <div class="forecastCard4 forecastCard">
+                            <span class="forecastCard4Temp" style="font-size: 35px;"></span>
+                            <span class="forecast4Time" style="font-size: 13px;"></span>
+                        </div>
+                    </div>
+                    <div class="chart">
+                        <h3>teplota v průběhu dne:</h3>
+                        <div id="graph" style="width:600px;height:230px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+
+    </script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/3310ecfa86.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

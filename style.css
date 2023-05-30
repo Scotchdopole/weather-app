@@ -1,0 +1,466 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url("img-noise-1920x1080.png");
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    height: 50px;
+    padding-left: 30px;
+    background-color: white;
+    gap: 30px;
+    padding: 10px;
+    margin-left: 50px;
+
+}
+
+img {
+    user-select: none;
+}
+
+input {
+    height: 40px;
+    border: none;
+    font-family: "poppins";
+    font-size: 20px;
+    width: 190px;
+    user-select: text;
+    text-transform: uppercase;
+    cursor: text;
+    letter-spacing: 1.5px;
+}
+
+
+input::placeholder {
+    text-transform: capitalize;
+    color: black;
+}
+
+input:-moz-placeholder {
+    text-transform: capitalize;
+    color: black;
+}
+
+
+.fa-map-marker-alt {
+    transform: scale(2);
+}
+
+.search {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+
+}
+
+.search:hover {
+    background-color: rgb(208, 226, 241);
+}
+
+input:focus {
+    outline: none;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    max-width: 1500px;
+    height: fit-content;
+
+}
+
+.weather {
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    margin-top: 0;
+    height: 500px;
+    margin-left: 50px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    display: none;
+    z-index: 2;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: "varela round";
+    margin-bottom: 100px;
+    animation: animation1 1.2s forwards ease;
+    flex-direction: row;
+    margin-right: 50px;
+    opacity: 0;
+    overflow: hidden;
+
+}
+
+
+@keyframes animation1 {
+    from {}
+
+    to {
+        opacity: 1;
+   
+    }
+}
+
+
+
+
+
+h1 {
+    display: block
+}
+
+p {
+    margin: 0;
+}
+
+.error {
+    background-color: white;
+    width: auto;
+    padding: 10px;
+    width: 350px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: none;
+    z-index: 1;
+    font-family: "poppins";
+    
+    opacity: 1;
+    margin-left: 50px;
+}
+
+
+
+.error span {
+    font-size: 20px;
+}
+
+.weather-condition {
+    width: 200px;
+    transition: 300ms ease;
+   
+}
+
+.weather-condition:hover {
+    transform: scale(1.1);
+    transition: 300ms ease;
+}
+
+.card {
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+    background: rgba(217, 217, 217, 0);
+    border: 3px solid rgb(0, 0, 0);
+    user-select: none;
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    transition: all 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    color: black;
+    font-family: "Varela Round";
+    font-size: 30px;
+    flex-direction: column;
+    border-bottom: 10px solid black;
+    transition: 300ms ease;
+
+}
+
+.card:hover {
+    transform: rotate(2deg);
+    /* background-color: #3be8b0; */
+
+    /* box-shadow: 0px 0px 79px 4px rgba(3, 190, 140, 0.89);
+    border: 3px solid #3be8b0;
+    border-bottom: 10px solid #3be8b0; */
+    transition: 300ms ease;
+}
+
+
+
+
+.weather-info {
+    display: flex;
+    gap: 20px;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-2x2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.weather-temp {
+    
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+.weather-forecast {
+    display: flex;
+    flex-direction: row;
+    gap: 10px 20px;
+    justify-content: center;
+    align-items: end;
+    height: 240px;
+    width: 570px;
+    
+}
+
+.forecastCard {
+    width: 130px;
+    height: 190px;
+    text-align: center;
+    background: rgba(217, 217, 217, 0);
+    backdrop-filter: blur(5px);
+    border-radius: 17px;
+    text-align: center;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 5px;
+    border-bottom: 5px solid black;
+
+
+}
+
+.forecastCard:hover {
+   
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: 300ms ease;
+
+
+
+}
+
+.chart {
+
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+
+}
+
+.chart #graph {
+    width: 100%;
+    padding: 0;
+
+}
+
+#graph>h3 {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.forecast-chart-wrapper {
+
+    
+    width: fit-content;
+
+}
+
+.coords {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.coords2 {
+    display: flex;
+    flex-direction: column;
+}
+
+::selection {
+    background-color: #21212180;
+}
+
+::-moz-selection {
+    background-color: #21212185;
+}
+
+.temp-info-wrapper{
+    display: flex;
+   justify-content: space-between;
+   margin-right: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+    .weather {
+        flex-direction: column;
+        height: 1000px;
+        justify-content: center;
+        align-items: center;
+       
+    }
+    .weather-info{
+        gap: 0px 0px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .forecast-chart-wrapper{
+        width: 400px;
+    }
+
+    .weather-forecast{
+        width: 400px;
+    }
+    .chart{
+        width: 400px;
+        
+       }
+       .temp-info-wrapper{
+        flex-direction: column;
+        width: 100%;
+    }
+
+}
+
+
+@media screen and (max-width: 1200px) {
+    .card {
+        transform: scale(0.8);
+        gap: 0px 0px;
+    }
+
+    .forecastCard {
+        width: 90px;
+        height: 150px;
+       
+        
+    }
+    .forecast-chart-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%
+    }
+
+    .weather-forecast{
+        width: 500px;
+    }
+
+   
+    .card-2x2{
+        gap: 0px 0px;
+        
+    
+    }
+
+    .weather-temp{
+        width: 100%;
+    }
+
+   .chart{
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   }
+
+   #graph{
+    width: 800px;
+   }
+
+
+  
+
+   .weather{
+    
+    height: fit-content;
+    flex-direction: column;
+   }
+
+
+   
+
+
+}
+
+
+@media screen and (max-width: 800px) {
+    .weather{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .search-box{
+        margin-left: 0;
+    }
+
+    .error{
+        margin: 0px;
+    }
+
+    
+    #graph{
+       width: 100px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+   .weather{
+    border-radius: 0px;
+   }
+
+   
+
+  
+}
+
