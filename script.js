@@ -232,7 +232,8 @@ async function checkWeather(city) {
                 paper_bgcolor: "#00000000",
                 margin: { t: 0, l: 20, r: 10 },
                 padding: 0,
-                showlegend: false
+                showlegend: false,
+                
             };
             
             Plotly.newPlot(document.querySelector("#graph"), data, layout, {staticPlot: true});

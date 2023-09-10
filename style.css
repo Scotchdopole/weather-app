@@ -273,7 +273,8 @@ p {
 .chart #graph {
     width: 100%;
     padding: 0;
-
+    width:600px;
+    height:230px;
 }
 
 #graph>h3 {
@@ -315,6 +316,9 @@ p {
    margin-right: 50px;
 }
 
+#forecastcardtemp{
+    font-size: 35px;
+}
 
 
 
@@ -415,10 +419,7 @@ p {
     
    }
 
-   #graph{
-    width: 800px;
-   }
-
+   
 
   
 
@@ -440,6 +441,10 @@ p {
         margin-left: 0;
         margin-right: 0;
     }
+    .temp-info-wrapper{
+        margin-left: 0;
+        margin-right: 0;
+    }
     .search-box{
         margin-left: 0;
     }
@@ -449,18 +454,56 @@ p {
     }
 
     
-    #graph{
-       width: 100px;
+     #graph{
+       width: 200px;
+    }
+    #forecastcardtemp{
+        font-size: 35px;
     }
 }
 
+@media screen and (max-width: 600px) {
+
+    .chart{
+        display: none;
+    }
+ 
+   
+ }
+
+
 @media screen and (max-width: 500px) {
    .weather{
-    border-radius: 0px;
+    border-top-right-radius: 0px;
    }
 
-   
+   .weather-forecast{
+    width: fit-content;
+    height: fit-content;
+    display:flex;
+    flex-direction: row;
+   }
+   .forecastCard{
+    
+    width: 70px;
+    height: 130px;
+   }
+   #forecastcardtemp{
+    font-size: 28px;
+    overflow: visible;
+   }
+  
 
   
 }
+
+
+@media screen and (max-width: 400px) {
+
+    .weather-forecast{
+        gap: 5px;
+    }
+ 
+   
+ }
 
