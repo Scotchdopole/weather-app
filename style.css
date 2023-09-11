@@ -364,10 +364,7 @@ p {
     .weather-forecast{
         width: 400px;
     }
-    .chart{
-        width: 400px;
-        
-       }
+    
        .temp-info-wrapper{
         flex-direction: column;
         width: 100%;
@@ -391,7 +388,7 @@ p {
     .forecast-chart-wrapper{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+      
         align-items: center;
         width: 100%
     }
@@ -465,7 +462,16 @@ p {
 @media screen and (max-width: 600px) {
 
     .chart{
-        display: none;
+        transform: scale(0.9);
+    }
+ 
+   
+ }
+
+ @media screen and (max-width: 550px) {
+
+    .chart{
+        transform: scale(0.8);
     }
  
    
@@ -492,6 +498,10 @@ p {
     font-size: 28px;
     overflow: visible;
    }
+
+   .chart{
+    transform: scale(0.7);
+}
   
 
   
@@ -502,6 +512,9 @@ p {
 
     .weather-forecast{
         gap: 5px;
+    }
+    .chart{
+        transform: scale(0.6);
     }
  
    
