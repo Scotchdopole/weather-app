@@ -83,10 +83,7 @@ async function checkWeather(city) {
         document.querySelector(".lat").innerHTML = lat
         document.querySelector(".lon").innerHTML = lon
 
-        const response2 = await fetch(apiUrl2 + "lat=" + lat + "&lon=" + lon + "&appid=" + apiKey);
-        var data2 = await response2.json();
-
-        console.log(data2);
+       
 
 
         const response3 = await fetch(apiUrl2 + "latitude=" + lat + "&longitude=" + lon);
