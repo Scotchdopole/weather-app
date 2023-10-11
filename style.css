@@ -1,7 +1,11 @@
-body {
+body{
     padding: 0;
     margin: 0;
-    background-image: url("img-noise-1920x1080.png");
+    background-image: url("./images/img-noise-1920x1080.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
 }
 
 .search-box {
@@ -119,8 +123,6 @@ input:focus {
 
 
 
-
-
 h1 {
     display: block
 }
@@ -143,7 +145,6 @@ p {
     opacity: 1;
     margin-left: 50px;
 }
-
 
 
 .error span {
@@ -187,14 +188,8 @@ p {
 
 .card:hover {
     transform: rotate(2deg);
-    /* background-color: #3be8b0; */
-
-    /* box-shadow: 0px 0px 79px 4px rgba(3, 190, 140, 0.89);
-    border: 3px solid #3be8b0;
-    border-bottom: 10px solid #3be8b0; */
     transition: 300ms ease;
 }
-
 
 
 
